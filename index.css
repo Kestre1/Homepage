@@ -132,6 +132,18 @@ a {
 #secondheader {
     font-family: Verdana, sans-serif;
     text-align: center;
+    margin: 3px 3px;
+    font-size: 25px;
+}
+
+#secondheaderbackground {
+    background-color: #003322;
+    color: white;
+    padding: 0px 2px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 h3 {
@@ -148,7 +160,7 @@ h3 {
 }
 
 iframe {
-    border-radius: 3px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 #back {
@@ -161,4 +173,26 @@ iframe {
     color: black;
     padding: 10px 10px;
     border-radius: 3px;
+    transition: 0.3s;
+}
+
+#back:hover {
+    background-color: rgba(255,255,255,0.7);
+    transition: 0.3s;
+}
+
+.incompletems {
+    background-color: #ffdddd;
+    border: none;
+    margin-top: 5px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid #cccc;
+}
+
+.testthing {
+    background-color: #dddd;
+    border: none;
+    width: 560;
+    border-radius: 4px 4px 0px 0px;
 }
