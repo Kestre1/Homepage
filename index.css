@@ -198,6 +198,7 @@ iframe {
 #back:hover {
     background-color: rgba(255,255,255,0.7);
     transition: 0.3s;
+    cursor: default;
 }
 
 #secondheader {
@@ -232,7 +233,7 @@ iframe {
 }
 
 .bookcontainer:hover {
-    background-color: #cccc;
+    background-color: #bbbb;
     transition: .3s;
     cursor: pointer;
 }
@@ -253,7 +254,7 @@ iframe {
 
 #booktext p {
     font-size: 14px;
-    margin-left: 20px;
+    margin-left: 13px;
     margin-top: 0px;
     font-weight: normal;
     vertical-align: top;
@@ -271,6 +272,11 @@ iframe {
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 8px;
+}
+
+.bookcontainer #booktext .middledot {
+    color: #888888;
+    margin-left: 13px;
 }
 
 /*Writing -> Bookpage*/
@@ -316,12 +322,16 @@ iframe {
 
 .bookinfo #booktext p {
     font-size: 15px;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-top: 0px;
     font-weight: normal;
     vertical-align: top;
     display: inline-block;
     color: #555555;
+}
+
+.bookinfo #booktext .middledot {
+    color: #888888;
 }
 
 .bookinfo #booktext h10 {
@@ -330,6 +340,10 @@ iframe {
 
 .bookinfo #booktext {
     max-width: 100%;
+}
+
+.bookinfo #booktext img {
+    margin-top: 10px;
 }
 
 .readbutton {
@@ -382,6 +396,132 @@ iframe {
 
 #storypageback img {
     margin-top: 2px;
+}
+
+#authorsnotecontainer {
+    width: 50%;
+    max-width: 1000px;
+    min-width: 700px;
+    background-color: #1111;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px dashed black;
+}
+
+.authorsnote {
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-size: 20;
+}
+
+.authorsnotetext {
+    font-family: Calibri, sans-serif;
+    font-size: 17;
+}
+
+/*Writing -> Bookpage -> Reader*/
+#smallfixedwritingheaderbar {
+    font-family: 'Noto Serif', serif;
+    font-size: 33;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+    color: white;
+    background-image: url("writingbig.png");
+    background-color: #0055FF;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+#storypagebackreader {
+    margin-left: 10px;
+    margin-top: 76px;
+    background-color: #ddd;
+    font-family: Verdana, sans-serif;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 2px;
+    position: fixed;
+}
+
+#storypagebackreader:hover {
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+#storypagebackreader:focus {
+    background-color: #aaa;
+}
+
+#storypagebackreader p {
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 17;
+}
+
+#storypagebackreader img {
+    margin-top: 2px;
+}
+
+#headerbar {
+    background-color: #113388;
+    color: white;
+    width: 735px;
+    margin-top: 18px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px 5px white;
+}
+
+#booktitle {
+    margin-bottom: 0px;
+    margin-top: 4px;
+    font-family: Calibri;
+    font-size: 18;
+}
+
+#parttitle {
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-family: Calibri;
+    font-size: 25;
+}
+
+#text {
+    width: 700px;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 19;
+    line-height: 1.4;
+    color: #303030;
+    padding-top: 150px;
+    text-align: left !important;
+}
+
+#headerwrap {
+    width: 100%;
+    position: fixed;
+    margin-top: 60px;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 1065px) {
+    #storypagebackreader {
+	margin-top: 12px;
+	background-color: rgba(255,255,255,0.5);
+    }
+    #storypagebackreader:hover {
+	background-color: rgba(255,255,255,0.7);
+    }
 }
 
 /*Animations*/
