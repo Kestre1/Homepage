@@ -5,11 +5,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <title>Read: The Tale of Hanson Grandious - Kestrel Bukhari</title>
+  <script>
+    var observer;
+    function onload() {
+	const firstline = document.getElementById('firstline');
+	observer = new IntersectionObserver(handleIntersection);
+	observer.observe(firstline);
+    }
+    function handleIntersection(entries) {
+	entries.map(entry => {
+	    if(entry.isIntersecting) {
+		for (const elt of document.querySelectorAll('.stalker'))
+		{
+		    console.log(elt);
+		    elt.classList.add('attop');
+		}
+	    }
+	    else {
+		for (const elt of document.querySelectorAll('.stalker'))
+		{
+		    elt.classList.remove('attop');
+		}
+	    }
+	});
+    }
+  </script>
 </head>
-<body style="margin: 0px;">
+<body style="margin: 0px;" onload="onload()">
   <div id='fixedbar'>
     <div id='smallfixedwritingheaderbar'>Writing</div>
   </div>
+  <form style="margin: 0;">
+    <a id='backtotop' class='stalker' href="#by"><img src='../../../backarrow.png' width='20px'></a>
+  </form>
   <form style="margin: 0;">
     <button id='storypagebackreader' formaction='../'><img src='../../../backarrow.png' width='20px'><p>Story Details</p></button>
   </form>
@@ -20,8 +48,11 @@
 	<h4 id='parttitle'>The Tale of Sir Grandious</h4>
       </div>
     </div>
+    <div id='by'>
+      <b style='font-size: 17;'>By: </b>Kestrel Bukhari
+    </div>
     <div id='text'>
-<p>Sir Hanson Grandious, gallant knight of the Kingdom of Raginor, hero of infinite courage, was having a very bad day.</p>
+<p id='firstline'>Sir Hanson Grandious, gallant knight of the Kingdom of Raginor, hero of infinite courage, was having a very bad day.</p>
 
 <p>Not just a regularly sized, get-stuck-in-a-swamp-and-lose-your-horse bad day. No, this was a bad day of epic proportions.</p>
 

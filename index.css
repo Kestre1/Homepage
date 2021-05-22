@@ -71,10 +71,16 @@ iframe {
 }
 
 #botbabyleft {
-    background-color: darkgrey;
+    background-image: url("presentations.png");
     width: 100%;
     height: 48%;
     animation-delay: 1.5s;
+    transition: 0.5s;
+}
+
+#botbabyleft:hover {
+    filter: brightness(70%);
+    transition: 0.5s;
 }
 
 /*Outer Right*/
@@ -503,7 +509,7 @@ iframe {
     font-size: 19;
     line-height: 1.4;
     color: #303030;
-    padding-top: 150px;
+    padding-top: 5px;
     text-align: left !important;
 }
 
@@ -522,6 +528,185 @@ iframe {
     #storypagebackreader:hover {
 	background-color: rgba(255,255,255,0.7);
     }
+}
+
+#backtotop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #bbbc;
+    display: block;
+    font-family: Calibri, sans-serif;
+    color: black;
+    border: none;
+    padding: 20px 15px;
+    margin-bottom: 16px;
+    margin-right: 23px;
+    transform: rotate(90deg);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#backtotop:hover {
+    background-color: #999b;
+    transition: 0.3s;
+}
+
+.attop {
+    display: none !important;
+    background-color: red !important;
+    transition: .5s;
+}
+
+#by {
+    width: 700px;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 17;
+    line-height: 1.4;
+    color: #505050;
+    padding-top: 150px;
+}
+
+/*Presentations*/
+#psheader {
+    font-family: 'Noto Serif', serif;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    color: white;
+    background-image: url("presentationsbig.png");
+    background-color: #7700FF;
+    display: flex;
+    justify-content: center;
+}
+
+#secondheaderbackgroundps {
+    background-color: #330055;
+    color: white;
+    padding: 0px 2px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+}
+
+#presentationsbody iframe {
+    border-radius: 0px;
+}
+
+#presentationsbody .videoheader {
+    background-color: #dddd;
+    border: none;
+    width: 560;
+    border-radius: 4px 4px 0px 0px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 17;
+}
+
+#presentationsbody .videoheaderbottom {
+    background-color: #dddd;
+    border: none;
+    width: 560;
+    border-radius: 0px 0px 4px 4px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 17;
+}
+
+#presentationsbody .videoheaderbottom a {
+    color: #444444;
+    text-decoration: none;
+    cursor: default;
+    /*text-decoration: underline;
+    text-decoration-thickness: 1px;*/
+}
+
+#presentationsbody .videoheaderbottom p {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 17px;
+    font-weight: normal;
+    color: #444444;
+    font-family: Calibri, sans-serif;
+}
+
+/*Terminology*/
+#termheader {
+    font-family: 'Noto Serif', serif;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    color: white;
+    background-color: #666666;
+    display: flex;
+    justify-content: center;
+}
+
+#termbody #secondheaderbackgroundps {
+    background-color: #7700FF;
+    color: white;
+    padding: 0px 2px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
+}
+
+#termscontainer {
+    background-color: transparent;
+    width: 680px;
+    font-family: Calibri, sans-serif;
+    font-size: 19px;
+    text-align: left;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+#termscontainer p {
+    margin: 2px;
+    margin-left: 20px;
+    font-size: 19px;
+}
+
+#termbody #back {
+    margin-left: 10px;
+    margin-top: -108px;
+    background-color: #ffffff88;
+    font-family: Verdana, sans-serif;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 2px;
+}
+
+#termbody #back:hover {
+    background-color: #ffffffbb;
+    transition: 0.3s;
+}
+
+#termbody #back:focus {
+    background-color: #ffffff55;
+}
+
+#termbody #back p {
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 17;
+}
+
+#termbody #back img {
+    margin-top: 2px;
 }
 
 /*Animations*/
