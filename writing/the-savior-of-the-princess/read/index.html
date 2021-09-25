@@ -1,0 +1,72 @@
+<head>
+  <link rel='stylesheet' href='../../../index.css'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <title>Read: The Savior of the Princess - Kestrel Bukhari</title>
+  <script>
+    var observer;
+    function onload() {
+	const firstline = document.getElementById('firstline');
+	observer = new IntersectionObserver(handleIntersection);
+	observer.observe(firstline);
+    }
+    function handleIntersection(entries) {
+	entries.map(entry => {
+	    if(entry.isIntersecting) {
+		for (const elt of document.querySelectorAll('.stalker'))
+		{
+		    console.log(elt);
+		    elt.classList.add('attop');
+		}
+	    }
+	    else {
+		for (const elt of document.querySelectorAll('.stalker'))
+		{
+		    elt.classList.remove('attop');
+		}
+	    }
+	});
+    }
+  </script>
+</head>
+<body style="margin: 0px;" onload="onload()">
+  <div id='fixedbar'>
+    <div id='smallfixedwritingheaderbar'>Writing</div>
+  </div>
+  <form style="margin: 0;">
+    <a id='backtotop' class='stalker' href="#by"><img src='../../../backarrow.png' width='20px'></a>
+  </form>
+  <form style="margin: 0;">
+    <button id='storypagebackreader' formaction='../'><img src='../../../backarrow.png' width='20px'><p>Story Details</p></button>
+  </form>
+  <center>
+    <div id='headerwrap'>
+      <div id='headerbar'>
+	<!-- <p id='booktitle'>Book Title</p> -->
+	<h4 id='parttitle'>The Savior of the Princess</h4>
+      </div>
+    </div>
+    <div id='by'>
+      <b style='font-size: 17;'>By: </b>Kestrel Bukhari
+    </div>
+    <div id='text'>
+      <p>Once upon a time, in the age of Kings and Knights, there lay a tower. Dark and desolate, the ruins of a long forgotten Kingdom. Stretching for miles around was an unyielding wasteland, devoid of water and life. Only the bravest knights dared venture there, for it was a place of great evil and peril.</p>
+      <p>None had returned.</p>
+      <p>Then one, a man of great courage and strength, went forth to the tower. For therein lay the ultimate prize: a princess, fair as the midday sun, imprisoned against her will in the ancient fortress. No matter how desperately she screamed for help, none had ever survived the perils of the tower.</p>
+      <p>But our knight in shining armor was not to be deterred. Bold and erect astride his white horse, he surveyed the landscape. A great moat of lava surrounded the former palace, spanned only by a rickety rope bridge. The castle itself was a graveyard of terrible traps that had killed many a fellow knight in the attempt to reach the tall tower in the center. Fallen spears, nets, and arrows indicated the deadly path that led to the princess imprisoned in a chamber at the very top.</p>
+      <p>The knight did not hesitate. With a glorious cry, he leapt off his horse and charged towards the moat. In a flash, he had crossed the lava and dashed through the castle, dodging the traps with skill and determination. The princess screamed once more, hope creeping into her clear, melodious voice. &#39;Fear not, princess!&#39; the knight shouted, &#39;for I shall rescue you!&#39;</p>
+      <p>And he leapt with speed past the remaining defenses, charging up the crumbling staircase that wound around the outside of the tower that was the only way to the top. He had thwarted many a protection with ease, nearly to the point of reaching the fair princess.</p>
+      <p>Oh, did I forget to mention the dragon?</p>
+      <p>A tremendous roar shook the ground, and the great red head of a terrible dragon appeared above the ruined castle, massive leathery wings spread in fury. A searing blast of fire shot from its mouth, exploding against the tower right behind the knight. He did not flinch, flying up the stairs with grave determination. Then a monstrous claw flew through the air, destroying the stairs in front of the knight. He skidded to a halt, trapped. <em>It is time,</em> the knight thought to himself, <em>I shall now slay the dragon!</em></p>
+      <p>The dragon growled, its fearsome head appearing just below the knight. It roared triumphantly, turning its gaping maw upward to swallow the knight whole. But crying &#39;DIE, WRETCHED BEAST!!!&#39; the knight raised his sword, leapt off the stairs, and sliced down in a righteous arc.</p>
+      <p>Then the dragon that the knight knew was absolutely feral and completely mindless raised a scaly eyebrow and moved its head out of the way.</p>
+      <p>The Knight screamed like a baby, plummeting quickly towards his doom. With an amused talon, the dragon grabbed him by his shining silvery underpants and lifted him at dizzying speed to the top of the tower, where he fell to the hard stones.</p>
+      <p>When the knight raised his head, he gasped. Standing in front of him was a maiden fairer and more flawless in complexion that any he had ever seen. &#39;My lady,&#39; he asked breathlessly, &#39;are you alright?&#39; Then said maiden kicked the knight in the head, knocking him unconscious.</p>
+      <p>With a snort of disgust, the princess crouched down in a very unladylike manner and peeled off the precious metal armor. &#39;Knights.&#39; she muttered &#39;always with their &quot;dragons are brainless beasts that must be slain&quot; and whatnot!&#39;. Calmly, she hauled the prone figure to the edge of her dilapidated room, where the dragon devoured the knight unashamedly.</p>
+      <p>Then, grabbing some water, the princess returned to her seat and opened a book, absentmindedly screaming for help to any unsuspecting knights stupid enough to go up against a dragon and its human.</p>
+      <center><p><strong>THE END.</strong></p></center>
+    </div>
+  </center>
+</body>

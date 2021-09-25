@@ -10,7 +10,12 @@ body {
 }
 
 iframe {
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 6px;
+    margin-bottom: 9px;
+}
+
+::selection {
+    background: rgba(0,0,0,.2);
 }
 
 /*Home*/
@@ -100,12 +105,26 @@ iframe {
 }
 
 #botinnerright {
+    /*background-image: url("musicalternate.png"); UNCOMMENT ALL UNDER ONCE OTHER NEW IMAGES ARE DONE*/
     background-image: url("music.jpg");
     width: 100%;
     height: 66%;
     transition: 0.5s;
     animation-delay: .6s;
+    /*background-position: center;*/
 }
+
+/*@media only screen and (max-width: 1370px) {
+    #botinnerright {
+	background-image: url("music2-small.png");
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+    #botinnerright {
+	background-image: url("music2-medium.png");
+    }
+}*/
 
 #botinnerright:hover {
     filter: brightness(70%);
@@ -124,11 +143,22 @@ iframe {
     text-decoration: none;
     animation: fade .4s linear;
     animation-fill-mode: both;
+    border-radius: 5px;
 }
 
 /*Music*/
+#musicbody {
+    /*background-image:
+    linear-gradient(white, white),
+    url("musicfaded.png");*/
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  margin: 0;
+}
+
 #musicheader {
-    font-family: 'Noto Serif', serif;
+    font-family: Noto Serif, serif;
     font-size: 55px;
     font-weight: bold;
     text-align: center;
@@ -139,24 +169,27 @@ iframe {
     background-color: #11Af59;
     display: flex;
     justify-content: center;
+    background-attachment: fixed;
 }
 
 #secondheaderbackgroundmusic {
-    background-color: #003322;
-    color: white;
-    padding: 0px 2px;
+    background-color: #eeeeee;
+    color: #119F59;
+    padding: 5px 5px 5px 5px;
     border: none;
-    border-radius: 3px;
+    border-left: 5px solid #119F59;
+    border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 5px;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .videoheader {
-    background-color: #dddd;
+    background-color: rgba(100,100,100,.2);
     border: none;
     width: 560;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 8px;
     font-family: 'Calibri', sans-serif;
     font-size: 17;
 }
@@ -166,14 +199,50 @@ iframe {
     margin-bottom: 0px;
 }
 
+.videoheader h10 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: #333333;
+}
+
 .videoheader p {
     margin-top: 0px;
     margin-bottom: 15px;
 }
 
+#video-unavailable {
+    width: 540;
+    height: 45;
+    background-color: red;
+    border-radius: 6px;
+    margin-bottom: 9px;
+}
+
+#video-unavailable p {
+    font-family: Calibri, sans-serif;
+    color: #333333;
+}
+
+#video-unavailable p a {
+    color: #119F59;
+}
+
+#video-unavailable p a:visited {
+    color: #119F59;
+}
+
 /*Writing*/
+#testwritingbody {
+    background-image:
+    linear-gradient(white, white),
+    /*url("writingfaded2.png");*/
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
 #writingheader {
-    font-family: 'Noto Serif', serif;
+    font-family: Noto Serif, serif;
     font-size: 55px;
     font-weight: bold;
     text-align: center;
@@ -181,17 +250,17 @@ iframe {
     padding: 50px 0px;
     color: white;
     background-image: url("writingbig.png");
-    object-fit: center;
     background-color: #0055FF;
     display: flex;
     justify-content: center;
+    background-attachment: fixed;
 }
 
 #back {
     float: left;
     margin-left: 5px;
     margin-right: -100px;
-    margin-top: 67px;
+    margin-top: 63px;
     background-color: rgba(255,255,255,0.5);
     font-family: Verdana, sans-serif;
     color: black;
@@ -209,18 +278,19 @@ iframe {
 
 #secondheader {
     text-align: center;
-    margin: 0px 3px;
-    font-size: 35px;
-    font-family: 'Lato', sans-serif;
-    ont-variant: small-caps;
+    margin: 0px 10px;
+    font-size: 34px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
 }
 
 #secondheaderbackground {
-    background-color: #000088;
-    color: white;
-    padding: 0px 2px;
+    background-color: #00000011;
+    color: #0044BB;
+    padding: 5px 5px;
     border: none;
-    border-radius: 3px;
+    border-left: 5px solid #0044BB;
+    border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -229,24 +299,34 @@ iframe {
     width: 90%;
     border: none;
     padding: 0px;
-    border-radius: 4px;
+    border-radius: 8px;
     max-width: 1000px;
-    background-color: #dddd;
+    background-color: rgba(170,140,140,.2);
     display: flex;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
     transition: .3s;
+    line-height: 1.3;
+}
+
+.bookcontainer #booktext div h10 {
+    font-size: 16px;
 }
 
 .bookcontainer:hover {
-    background-color: #bbbb;
+    background-color: rgba(145,145,145,.3);
     transition: .3s;
     cursor: pointer;
 }
 
 .bookcontainer img {
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 7px;
     transition: .3s;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    vertical-align: center;
 }
 
 .bookcontainer:hover img {
@@ -259,9 +339,9 @@ iframe {
 }
 
 #booktext p {
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 13px;
-    margin-top: 0px;
+    margin-top: -4px;
     font-weight: normal;
     vertical-align: top;
     display: inline-block;
@@ -275,7 +355,7 @@ iframe {
 }
 
 .bookcontainer #booktext h3 {
-    margin-top: 20px;
+    margin-top: 18px;
     margin-left: 20px;
     margin-bottom: 8px;
 }
@@ -569,7 +649,7 @@ iframe {
 
 /*Presentations*/
 #psheader {
-    font-family: 'Noto Serif', serif;
+    font-family: Noto Serif, serif;
     font-size: 55px;
     font-weight: bold;
     text-align: center;
@@ -583,34 +663,36 @@ iframe {
 }
 
 #secondheaderbackgroundps {
-    background-color: #330055;
-    color: white;
-    padding: 0px 2px;
+    background-color: #eeeeee;
+    color: #3300BB;
+    padding: 5px 5px;
     border: none;
-    border-radius: 3px;
+    border-left: solid 5px #3300BB;
+    border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding-bottom: 2px;
+    padding-bottom: 7px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #presentationsbody iframe {
-    border-radius: 0px;
+    border-radius: 7px;
 }
 
 #presentationsbody .videoheader {
-    background-color: #dddd;
+    background-color: rgba(170,140,140,.2);
     border: none;
     width: 560;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     font-family: 'Calibri', sans-serif;
     font-size: 17;
 }
 
 #presentationsbody .videoheaderbottom {
-    background-color: #dddd;
+    background-color: rgba(170,140,140,.2);
     border: none;
     width: 560;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 8px 8px;
     font-family: 'Calibri', sans-serif;
     font-size: 17;
 }
@@ -631,6 +713,29 @@ iframe {
     font-weight: normal;
     color: #444444;
     font-family: Calibri, sans-serif;
+}
+
+/*Concert Page*/
+#topline-concert {
+    background-color: #555555;
+    width: 100%;
+    height: 8px;
+}
+
+#concertinfo {
+    width: 90%;
+    max-width: 1000px;
+}
+
+#concertinfo img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #concertinfo img {
+	width: 65%;
+    }
 }
 
 /*Terminology*/
