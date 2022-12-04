@@ -1,0 +1,110 @@
+/*Text*/
+.videocontainer h5 {
+    /*position & size*/
+    position: absolute;
+    top: 19px;
+    left: 30px;
+    margin: 4px;
+    margin-left: 0;
+    margin-bottom: 2px;
+    /*style*/
+    font-family: Lato, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: black 0px 0px 5px;
+}
+
+.videocontainer p {
+    /*position & size*/
+    position: absolute;
+    top: 49px;
+    left: 30px;
+    margin: 0;
+    /*style*/
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: black 0px 0px 3px;
+}
+
+/*Container*/
+.videocontainer {
+    width: 540px;
+    border-radius: 15px;
+    overflow: hidden;
+    filter: saturate(80%);
+    background-color: #0006;
+}
+
+/*Play Button & Title*/
+.play {
+    position: absolute;
+    background-image: url("play-svgrepo-com.svg");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: #FFF0;
+    filter: invert(1);
+    border-radius: 50px;
+    background-position: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.videocontainer:hover .play {
+    filter: invert(70%);
+    transition: .3s;
+}
+
+/*Video Code*/
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video div {
+    position: absolute;
+    display: flex;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.video div img {
+    width: 100%;
+    height: 100%;
+}
+
+.video:after {
+    content: "";
+    position: absolute;
+    display: block; 
+    background: url(play-button.png) no-repeat 0 0; 
+    top: 45%; left: 45%;
+    width: 46px;
+    height: 36px;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* image poster clicked, player class added using js */
+.video.player div {
+    display: none;
+}
+
+.video.player:after {
+    display: none;
+}

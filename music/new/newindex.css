@@ -1,0 +1,393 @@
+/*COMMON ASSETS*/
+/*Body*/
+html {
+    scrollbar-color: #606065 #111;
+}
+
+body {
+    margin: 0;
+    background-image: url("");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: visible;
+    /*animation*/
+    animation-name: body-image-onload-main;
+    animation-duration: 2s;
+}
+
+body::before {
+    content: " ";
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    /*animation*/
+    animation-name: body-image-onload-before;
+    animation-duration: 2s;
+}
+
+/*Header*/
+#back {
+    /*position & size*/
+    position: absolute;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    /*style*/
+    border: none;
+    border-radius: 30px;
+    background-color: #FFFA;
+    filter: invert(1);
+    /*icon*/
+    background-image: url("chevron-back-svgrepo-com.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 1px 3px;
+    /*transition*/
+    transition: .3s;
+}
+
+#back:hover {
+    /*position & size change*/
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    /*style change*/
+    border-radius: 35px;
+    background-color: #FFFC;
+    /*icon*/
+    background-size: 80%;
+    background-position: 5px 7px;
+    /*transition*/
+    transition: .3s;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#header p {
+    color: white;
+    font-family: Noto Serif Display, serif;
+    letter-spacing: 2px;
+    font-size: 70px;
+    margin: 0;
+    /*animation*/
+    animation-name: header-fade-in;
+    animation-duration: 1.5s;
+}
+
+#headercover {
+    background-image: url("");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 75px;
+    margin-top: 175px;
+    /*animation*/
+    animation-name: wait;
+    animation-duration: 2.1s;
+}
+
+/*Nav Bar*/
+#littleheader {
+    /*position & size*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*display*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    /*style*/
+    background-color: transparent;
+    color: transparent;
+    /*transition*/
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#littleheader.littleheader-active {
+    background-color: #292929EE;
+    color: white;
+    /*transition*/
+    max-height: 500px;
+    overflow: visible;
+    transition: max-height 2s;
+}
+
+#littleheader button {
+    padding: 15px 30px;
+    background: transparent;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+#littleheader button p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+#littleheader button div {
+    height: 3.5px;
+    /*transition*/
+    width: 0%;
+    transition: width .2s;
+}
+
+#littleheader button:hover div {
+    width: 100%;
+    transition: width .2s;
+}
+
+#smallback {
+    /*position & size*/
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45px;
+    height: 45px;
+    /*style*/
+    background-image: url("chevron-back-svgrepo-com.svg");
+    background-size: 85%;
+    background-position: 1.5px;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    filter: invert(1);
+    /*transition*/
+    transition: .3s;
+}
+
+#smallback:hover {
+    background-color: #E9E9E9EE;
+    transition: .3s;
+}
+
+.focus-underline {
+    width: 100% !important;
+}
+
+/*Blocks*/
+.block {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.block p {
+    margin-top: 0;
+}
+
+.categoryheader {
+    position: sticky;
+    padding: 2px 35px 3px 35px;
+    border: none;
+    border-radius: 100px;
+    transition: .3s;
+}
+
+.categoryheader p {
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+}
+
+.categoryheader_bottomline {
+    transform: translateY(-3px);
+    width: 70px;
+    height: 5px;
+    z-index: 1;
+    border-radius: 5px;
+}   
+
+#block1 {
+    /*obsolete, solved by background-linear-gradient in music
+    background-color: #000D;*/
+    color: white;
+    padding-bottom: 30px;
+    /*background overlay*/
+    background-image: url("");
+    background-size: cover;
+    background-attachment: fixed;
+    /*animation*/
+    animation-name: block-slide-in;
+    animation-duration: 2s;
+}
+
+#block1 .categoryheader {
+    background-color: #AAA2;
+    color: white;
+}
+
+#block1 .subheader-anchor-stuck .categoryheader {
+    z-index: 0;
+    background-color: #111111DD;
+    transition: .1s;
+}
+
+#block2 {
+    background-color: #DDDD;
+    color: white;
+    padding-bottom: 30px;
+    /*background-overlay*/
+    background-image: url("");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#block2 .categoryheader {
+    background-color: #4443;
+    color: #000;
+}
+
+#block2 .subheader-anchor-stuck2 .categoryheader {
+    z-index: 0;
+    background-color: #FFFE;
+    transition: .1s;
+}
+
+/*Anchors*/
+.subheader-anchor {
+    position: sticky;
+    top: 70px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#positionsticky-detector {
+    height: 1px;
+    background-color: transparent;
+}
+
+/*Layout Integration*/
+#contentflexcontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.videooutercontainer {
+    margin: 20px;
+}
+
+/*Animations*/
+@keyframes body-image-onload-before {
+    0% {background: #000;}
+    25% {background: #000;}
+    100% {background: transparent;}
+}
+
+@keyframes body-image-onload-main {
+    from {background-image: url("../musicbig.jpg");
+	  background-size: 120%;
+	  background-repeat: no-repeat;
+	  background-position: 10% 20%;
+	  background-color: #000;
+	  overflow: hidden;}
+    to {background-color: #111909;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	overflow: hidden;}
+}
+
+@keyframes wait {
+    from {background: transparent;}
+    to {background: transparent;}
+}
+
+@keyframes block-slide-in {
+    0% {transform: translateY(100%); opacity: 0; background: #000D;}
+    50% {transform: translateY(100%); opacity: 0; background: #000D;}
+    100% {transform: translateY(0%); opacity: 1; background: #000D;}
+}
+
+/*MUSIC*/
+#body-music {
+    background-color: #111901 !important;
+    background-image: url("../../musicbig.jpg");
+}
+
+#body-music #headercover {
+    background-image: url("../../musicbig.jpg");
+}
+
+#littleheader #music-underline {
+    background: linear-gradient(to right, #44EE44, #008311);
+}
+
+#body-music #block1 {
+    background-image:
+	linear-gradient(#000D, #000D),
+	url("../musicbig.jpg");
+}
+
+#body-music #block2 {
+    background-image:
+	linear-gradient(#FFFC, #FFFC),
+	url("../musicbig.jpg");
+}
+
+#body-music .categoryheader_bottomline {
+    background: linear-gradient(to right, #44EE44, #008311);
+}
+
+/*WRITING*/
+#body-writing {
+    background-color: #112;
+    background-image: url("../writingbig.png");
+}
+
+#body-writing #headercover {
+    background-image: url("../writingbig.png");
+}
+
+#littleheader #writing-underline {
+    background-image: linear-gradient(to right, #44BBEE, #4444EE);
+}
+    
+
+#body-writing #littleheader.littleheader-active {
+    background-color: #21212AEE;
+}
+
+#body-writing #block1 {
+    background-image:
+	linear-gradient(#000D, #000D),
+	url("../writingbig.png");
+}
+
+#body-writing #block1 .subheader-anchor-stuck .categoryheader {
+    background-color: #111119DD;
+}
+
+#body-writing #block2 {
+    background-image:
+	linear-gradient(#FFFD, #FFFD),
+	url("../writingbig.png");
+}
+
+#body-writing #block2 .subheader-anchor-stuck .categoryheader {
+    background-color: #FFFFFFDD;
+}
+
+#body-writing .categoryheader_bottomline {
+    background: linear-gradient(to right, #44BBEE, #4444EE);
+}
+/*#4499DD, #3b5cdb
