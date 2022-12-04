@@ -2,6 +2,10 @@ body {
     margin: 1%;
 }
 
+svg {
+    display: none;
+}
+
 #god {
     width: 100%;
     height: 100%;
@@ -16,6 +20,93 @@ iframe {
 
 ::selection {
     background: rgba(0,0,0,.2);
+}
+
+/*New Home*/
+#home2body {
+    background-color: #0011AA;
+    background-image: url('/home/kestrel/Pictures/moon2.jpg');
+    background-size: cover;
+    margin: 0;
+}
+
+#outercenterer {
+    display: flex;
+    background-color: #0305;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#innercenterer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#nametitletext {
+    color: white;
+    font-family: 'Oranienbaum', serif;
+    font-size: 8vw;
+    margin: 20;
+}
+
+#home2enter {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: default;
+}
+
+#home2enter:hover {
+    background-color: white;
+    color: #000077;
+    transition: 0.3s;
+}
+
+#home2promotion {
+    background-color: #1113;
+    border: none;
+    border-radius: 6px;
+    padding: 11px;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+#home2promotion:hover {
+    background-color: #1115;
+    transition: .3s;
+}
+
+#home2promotion img {
+    width: 200px;
+}
+
+/*New Home Mobile*/
+@media only screen and (max-width: 980px) {
+    #nametitletext {
+	font-size: 20vw;
+	text-align: center;
+    }
+
+    #home2enter {
+	font-size: 50px;
+	padding: 30px 60px;
+	border: solid 6px white;
+	margin-top: 40;
+    }
 }
 
 /*Home*/
@@ -146,6 +237,28 @@ iframe {
     border-radius: 5px;
 }
 
+#back {
+    float: left;
+    margin-left: 15px;
+    margin-right: -100px;
+    margin-top: 63px;
+    background-color: transparent;
+    color: black;
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(100%);
+}
+
+#back:hover {
+    background-color: #FFF5;
+}
+
+
 /*Music*/
 #musicbody {
     /*background-image:
@@ -158,9 +271,8 @@ iframe {
 }
 
 #musicheader {
-    font-family: Noto Serif, serif;
+    font-family: Noto Serif Display, serif;
     font-size: 55px;
-    font-weight: bold;
     text-align: center;
     width: 100%;
     padding: 50px 0px;
@@ -186,7 +298,7 @@ iframe {
 }
 
 .videoheader {
-    background-color: rgba(100,100,100,.2);
+    background-color: rgba(100,100,130,.2);
     border: none;
     width: 560;
     border-radius: 8px;
@@ -231,7 +343,133 @@ iframe {
     color: #119F59;
 }
 
-/*Writing*/
+/*Writing Main Page*/
+#writingmainheader {
+    font-family: 'Fraunces', serif;
+    font-size: 55px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    color: white;
+    background-image: url("writingbig.png");
+    background-color: #0055FF;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+    border-radius: 0px;
+}
+
+#writingmainback {
+    float: left;
+    margin-left: 15px;
+    margin-right: -100px;
+    margin-top: 59px;
+    background-color: transparent;
+    font-family: Verdana, sans-serif;
+    color: black;
+    border-radius: 50%;
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(100%);
+}
+
+#writingmainback:hover {
+    background-color: #FFF5;
+}
+
+#sectionscontainer {
+    margin: 0;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+#sectiontitleclick {
+    background-color: #0001;
+    color: #04B;
+    border: none;
+    border-left: 5px solid #04B;
+    border-radius: 5px;
+    margin: 30px;
+    width: 30%;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#sectiontitleclick:hover {
+    background-color: #0001;
+}
+
+.sectiontitletitle {
+    font-family: Raleway, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+    padding: 15px 0px;
+}
+
+.sectiontitletitle p {
+    margin: 0;
+}
+
+.sectiontitledescription {
+    background-color: transparent;
+    transition: .3s;
+    line-height: 0;
+    color: transparent;
+    font-family: Raleway, sans-serif;
+}
+
+#sectiontitleclick:hover .sectiontitledescription {
+    font-size: 15;
+    color: black;
+    background-color: #00000012;
+    margin: 0;
+    padding: 15px 50px;
+    transition: .3s;
+    line-height: 1.3;
+}
+
+#writingmain-authorsnotecontainer {
+    width: 50%;
+    max-width: 1000px;
+    min-width: 700px;
+    background-color: #eeeA;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px dashed black;
+}
+
+#writingmain-center {
+    /*position: absolute;
+    bottom: 0;*/
+    width: 98%;
+    margin: 0;
+}
+
+.writingmain-authorsnote {
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+    font-size: 20;
+}
+
+.writingmain-authorsnotetext {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 17;
+}
+
+/*Writing - Stories*/
 #testwritingbody {
     background-image:
     linear-gradient(white, white),
@@ -242,9 +480,9 @@ iframe {
 }
 
 #writingheader {
-    font-family: Noto Serif, serif;
+    font-family: Noto Serif Display, serif;
     font-size: 55px;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
     width: 100%;
     padding: 50px 0px;
@@ -256,31 +494,12 @@ iframe {
     background-attachment: fixed;
 }
 
-#back {
-    float: left;
-    margin-left: 5px;
-    margin-right: -100px;
-    margin-top: 63px;
-    background-color: rgba(255,255,255,0.5);
-    font-family: Verdana, sans-serif;
-    color: black;
-    padding: 10px 10px;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-
-#back:hover {
-    background-color: rgba(255,255,255,0.7);
-    transition: 0.3s;
-    cursor: default;
-}
-
 #secondheader {
     text-align: center;
     margin: 0px 10px;
     font-size: 34px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 600 !important;
     line-height: 1.2;
 }
 
@@ -293,6 +512,7 @@ iframe {
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .bookcontainer {
@@ -303,15 +523,16 @@ iframe {
     max-width: 1000px;
     background-color: rgba(170,140,140,.2);
     display: flex;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 23px;
+    font-family: Raleway, sans-serif;
+    font-size: 21px;
     font-weight: normal;
     transition: .3s;
     line-height: 1.3;
 }
 
 .bookcontainer #booktext div h10 {
-    font-size: 16px;
+    font-size: 16.5px;
+    font-family: Source Sans Pro, sans-serif;
 }
 
 .bookcontainer:hover {
@@ -339,13 +560,14 @@ iframe {
 }
 
 #booktext p {
-    font-size: 16px;
+    font-size: 15px;
     margin-left: 13px;
     margin-top: -4px;
     font-weight: normal;
     vertical-align: top;
     display: inline-block;
     color: #555555;
+    font-family: Open Sans, sans-serif;
 }
 
 #booktext h10 {
@@ -365,11 +587,75 @@ iframe {
     margin-left: 13px;
 }
 
+/*Writing Nav*/
+#writingnavheader {
+    background-color: #05D;
+    text-align: center;
+    cursor: default;
+}
+
+#writingnavheader a {
+    color: white;
+    display: inline-block;
+    padding: 10px 0px;
+    font-family: Open Sans, sans-serif;
+    font-size: 17;
+    font-weight: 800;
+    cursor: default;
+    transition: .2s;
+    width: 240px;
+}
+
+#writingnavheader a:hover {
+    background-color: #06D;/*#04C*/
+    transition: .2s;
+}
+
+/*Academic Writing*/
+#academicwritingbody i {
+    background: url('writing/round_notes_black_24dp.png');
+    filter: invert(0) !important;
+    margin-right: 15px;
+    width: 28px;
+    height: 28px;
+    font-size: 17 !important;
+    display: inline-block;
+    background-size: contain;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.academicclicker p {
+    margin: 0;
+    display: inline-block;
+}
+
+.academicclicker {
+    padding: 10px 30px;
+    background-color: #0022;
+    border: none;
+    border-radius: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: 15;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+}
+
+.academicclicker:hover {
+    background-color: #0023;
+    transition: .2s;
+}
+
 /*Writing -> Bookpage*/
+#storydetailsbody {
+    margin: 0;
+    background-color: white;
+}
+
 #smallwritingheaderbar {
-    font-family: 'Noto Serif', serif;
+    font-family: Noto Serif Display, serif;
     font-size: 33;
-    font-weight: bold;
     text-align: center;
     width: 100%;
     padding: 10px 0px;
@@ -378,6 +664,7 @@ iframe {
     background-color: #0055FF;
     display: flex;
     justify-content: center;
+    font-weight: 900;
 }
 
 .bookinfo {
@@ -394,8 +681,8 @@ iframe {
 }
 
 .bookinfo img {
-    border-radius: 2px;
-    margin-right: 50px;
+    border-radius: 7px;
+    margin-right: 30px;
     margin-top: 5px;
 }
 
@@ -404,6 +691,7 @@ iframe {
     margin-left: 20px;
     margin-bottom: 8px;
     font-size: 30;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .bookinfo #booktext p {
@@ -414,6 +702,7 @@ iframe {
     vertical-align: top;
     display: inline-block;
     color: #555555;
+    font-family: Open Sans, sans-serif;
 }
 
 .bookinfo #booktext .middledot {
@@ -421,7 +710,9 @@ iframe {
 }
 
 .bookinfo #booktext h10 {
-    font-size: 16;
+    font-size: 17;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.3;
 }
 
 .bookinfo #booktext {
@@ -436,12 +727,13 @@ iframe {
     margin-left: 20px;
     background-color: #0055FF;
     border: none;
-    font-family: 'Lato', sans-serif;
-    padding: 10px 22px;
-    border-radius: 5px;
+    padding: 9px 24px 9px 24px;
+    border-radius: 6px;
     color: white;
-    font-size: 16px;
+    font-size: 17;
     transition: 0.3s;
+    display: flex !important;
+    align-items: center;
 }
 
 .readbutton:hover {
@@ -449,26 +741,44 @@ iframe {
     transition: 0.3s;
 }
 
+.readbutton p {
+    color: white !important;
+    margin: 0 !important;
+    margin-left: 15 !important;
+    font-size: 17 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+i {
+    background: url('writing/book-svgrepo-com.svg');
+    height: 18px;
+    width: 18px;
+    filter: invert(100);
+    margin: 0;
+    display: inline-block;
+    background-size: contain;
+}
+
 #storypageback {
     margin-left: 10px;
     margin-top: 10px;
-    background-color: #ddd;
+    background-color: #ddd0;
     font-family: Verdana, sans-serif;
     color: black;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 5px;
     transition: 0.3s;
-    border: none;
+    border: 0px solid #eee;
     margin-bottom: 2px;
 }
 
 #storypageback:hover {
-    background-color: #ccc;
+    background-color: #dde;
     transition: 0.3s;
 }
 
 #storypageback:focus {
-    background-color: #aaa;
+    background-color: #ccd;
 }
 
 #storypageback p {
@@ -485,20 +795,23 @@ iframe {
 }
 
 #authorsnotecontainer {
-    width: 50%;
-    max-width: 1000px;
+    width: 100%;
     min-width: 700px;
-    background-color: #1111;
-    padding: 20px;
+    background-color: rgba(1,1,1,.1);
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 20px;
-    border: 1px dashed black;
 }
 
 .authorsnote {
     font-family: Calibri, sans-serif;
     font-weight: bold;
     font-size: 20;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .authorsnotetext {
@@ -506,9 +819,35 @@ iframe {
     font-size: 17;
 }
 
+#leftline {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17;
+    line-height: 1.3;
+    margin: 0 !important;
+    margin-bottom: -13 !important;
+    border-left: solid 4px #afafaf;
+    padding-left: 10px;
+    color: #222;
+}
+
+.seriesmarker {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17;
+    line-height: 1.3;
+    margin: 0;
+    border-left: solid 4px #111;
+    padding-left: 10px;
+    color: black;
+}
+
+#ssmall {
+    font-size: 16 !important;
+    margin-bottom: -10 !important;
+}
+
 /*Writing -> Bookpage -> Reader*/
 #smallfixedwritingheaderbar {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Serif Display', serif;
     font-size: 33;
     font-weight: bold;
     text-align: center;
@@ -525,19 +864,20 @@ iframe {
 #storypagebackreader {
     margin-left: 10px;
     margin-top: 76px;
-    background-color: #ddd;
+    background-color: transparent;
     font-family: Verdana, sans-serif;
     color: black;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 6px;
     transition: 0.3s;
     border: none;
     margin-bottom: 2px;
     position: fixed;
+    font-weight: bold;
 }
 
 #storypagebackreader:hover {
-    background-color: #ccc;
+    background-color: #ddd;
     transition: 0.3s;
 }
 
@@ -559,38 +899,46 @@ iframe {
 }
 
 #headerbar {
-    background-color: #113388;
+    background-color: #111;
     color: white;
     width: 735px;
     margin-top: 18px;
     padding-top: 16px;
     padding-bottom: 8px;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0px 0px 7px 5px white;
 }
 
 #booktitle {
     margin-bottom: 0px;
     margin-top: 4px;
-    font-family: Calibri;
+    font-family: Raleway, sans-serif;
     font-size: 18;
 }
 
 #parttitle {
     margin-bottom: 5px;
     margin-top: 0px;
-    font-family: Calibri;
-    font-size: 25;
+    font-family: Raleway, sans-serif;
+    font-size: 20;
 }
 
 #text {
     width: 700px;
-    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Lusitana, serif;
     font-size: 19;
     line-height: 1.4;
     color: #303030;
     padding-top: 5px;
     text-align: left !important;
+}
+
+#authorsnotecontainer a {
+    color: #0055FF;
+}
+
+#authorsnotecontainer a:visited {
+    color: #0044FF;
 }
 
 #headerwrap {
@@ -614,7 +962,7 @@ iframe {
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: #bbbc;
+    background-color: #bbcc;
     display: block;
     font-family: Calibri, sans-serif;
     color: black;
@@ -623,7 +971,7 @@ iframe {
     margin-bottom: 16px;
     margin-right: 23px;
     transform: rotate(90deg);
-    border-radius: 4px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
@@ -647,11 +995,17 @@ iframe {
     padding-top: 150px;
 }
 
+/*Read New*/
+#articleheaderbar {
+    background-color: orange;
+    text-align: center;
+}
+
 /*Presentations*/
 #psheader {
-    font-family: Noto Serif, serif;
+    font-family: Noto Serif Display, serif;
     font-size: 55px;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
     width: 100%;
     padding: 50px 0px;
@@ -721,14 +1075,25 @@ iframe {
     background-color: rgb(7,7,7);
 }
 
+#concert-watch-body ::selection {
+    background: #eee;
+    color: rgb(7,7,7);
+}
+
 #concertinfo {
     width: 90%;
     max-width: 1200px;
 }
 
-#concertinfo img {
+#concertvideocontainer {
+    background-color: red;
     width: 80%;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+#concertinfo video {
+    width: 100% !important;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -833,6 +1198,183 @@ iframe {
     font-size: 17 !important;
     color: red;
     opacity: 0;
+}
+
+
+#watchback {
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #ddd0;
+    font-family: Verdana, sans-serif;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 0px solid #eee;
+    margin-bottom: 2px;
+    position: sticky;
+}
+
+#watchback:hover {
+    background-color: #fff1;
+    transition: 0.3s;
+}
+
+#watchback:focus {
+    background-color: #fff2;
+}
+
+#watchback p {
+    margin: 0px;
+    margin-top: 1px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 17;
+    color: white;
+    font-weight: bold;
+}
+
+#watchback img {
+    margin-top: 3px;
+    filter: invert(100%);
+}
+
+/*Video.js Custom Skin 2*/
+.video-js .vjs-progress-control .vjs-progress-holder {
+    overfow: hidden !important;
+}
+
+.video-js .vjs-slider-bar { /*playbar played progress*/
+    background-color: #00b6f0 !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+    margin-left: 1 !important;
+}
+
+.video-js .vjs-play-progress {
+    border-radius: 30px !important;
+    perspective: 1px !important;
+}
+
+.video-js .vjs-play-progress::before { /*playbar playhead*/
+    color: white !important;
+    position: absolute !important;
+    z-index: 2;
+    font-size: 16 !important;
+}
+
+/*.video-js .vjs-progress-holder .vjs-load-progress, .video-js .vjs-progress-holder .vjs-load-progress div, .video-js .vjs-progress-holder .vjs-play-progress {
+    overflow: hidden !important;
+    border-radius: 12px !important;
+}*/
+
+.video-js .vjs-slider { /*Unplayed, unloaded playbar progress*/
+    background-color: rgba(255,255,255,.1) !important;
+    height: 5px !important;
+    border-radius: 10px;
+    overflow: visible !important;
+}
+
+.video-js .vjs-load-progress div { /*loaded unplayed progress*/
+    background-color: rgba(255,255,255,.3) !important;
+    height: 5px !important;
+    border-radius: 5px;
+    position: absolute !important;
+    margin-left: 0 !important;
+}
+
+.video-js .vjs-load-progress {
+    background-color: transparent !important;
+    border-radius: 5px !important;
+    filter: drop-shadow(0px 0px 3px black);
+}
+
+.vjs-control-bar { /*control bar background*/
+    /*background-image: linear-gradient(transparent,rgba(0,0,0,.6)) !important;*/
+    height: 40 !important;
+    background-color: #111d !important;
+}
+
+.vjs-button > .vjs-icon-placeholder::before { /*icons*/
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.5em !important;
+}
+
+.video-js .vjs-time-control {
+    display: block !important;
+    line-height: 40px !important;
+    padding: 0 !important;
+    font-family: Lato, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+}
+
+.video-js .vjs-current-time {
+    margin-left: 10px !important;
+}
+
+.video-js .vjs-duration {
+    display: none !important;
+}
+
+.video-js .vjs-time-divider {
+    display: none !important;
+}
+
+vjs-time-divider div {
+    width: 5px !important;
+}
+
+.video-js .vjs-remaining-time {
+    display: block !important;
+}
+
+.vjs-menu-content {
+    background-color: lightgreen !important;
+    padding: 10px !important;
+}
+
+.vjs-menu-item {
+    padding: 10px !important;
+}
+
+.vjs-menu-item:hover {
+    background-color: orangered !important;
+}
+
+.js-focus-visible .vjs-menu li.vjs-selected:hover, .vjs-menu li.vjs-selected, .vjs-menu li.vjs-selected:focus, .vjs-menu li.vjs-selected:hover {
+    background-color: yellow !important;
+}
+
+.video-js .vjs-fullscreen-control {
+    margin-right: 5px !important;
+}
+
+.video-js .vjs-play-control {
+    margin-left: 5px !important;
+}
+
+.video-js .vjs-control:focus, .video-js .vjs-control:focus::before, .video-js .vjs-control:hover::before {
+    text-shadow: none !important;
+}
+
+.video-js .vjs-control:hover {
+    font-size: 12 !important;
+    transition: .3s;
+}
+
+.video-js .vjs-control {
+    transition: .3s;
+}
+
+.video-js .vjs-big-play-button {
+    background-color: rgba(255,255,255,.5) !important;
+    border: none !important;
 }
 
 /*Terminology*/
